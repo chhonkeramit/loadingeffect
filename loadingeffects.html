@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loading effects</title>
+	<style type="text/css">
+		body{
+			background: black;
+		}
+		.loading{
+			width: 200px;height: 200px;background: rgb(32,5,0);border-radius: 50%;position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);
+		}
+		/*h2{
+			color: green;top:50%;left:50%;transform: translate(-50%,-50%);font-size: 15px;position: absolute;animation: animate 5s linear infinite;
+		}*/
+		.loading:before{
+			content: '';border-radius: 50%;width: 200px;height: 200px;position: absolute;box-sizing: border-box;animation: animate 5s linear infinite;background: rgb(51,8,0);
+		}
+		.loading:after{
+			content: 'plz wait the page is loading...';color: green;top:50%;left:50%;transform: translate(-50%,-50%);font-size: 15px;position: absolute;/*animation: animate 8s linear infinite;*/
+		}
+       
+		@keyframes animate{
+			0%{
+				left:0;
+			}
+			
+			
+			50%{
+				left: 100%;transform: scale(0.5,0.5);/*transform: rotate(180deg);*/
+			}
+
+			100%{
+				left: 0;
+				
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<!-- <h2>Plz wait page is loading...</h2> -->
+	</div>
+
+</body>
+</html>
